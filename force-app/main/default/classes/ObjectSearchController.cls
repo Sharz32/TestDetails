@@ -1,6 +1,6 @@
 /*
 	Author: Sharath Jayaraj (sh.sharath@gmail.com)
-	Date: 05-12-2023
+	Date: 05-13-2023
 	Purpose: this class is used to dynamically control the LWC features of objectSearch
  */
 public class ObjectSearchController {
