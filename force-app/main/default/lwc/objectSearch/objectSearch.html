@@ -1,0 +1,32 @@
+<!-- sldsValidatorIgnore -->
+
+<template>
+    <lightning-card>
+        <div class="slds-p-horizontal_small">
+        <template for:each={fieldWrappper} for:item="fw">
+            <lightning-input key={fw.Id} type="text" label={fw.Search_Fields__c}  value={inpvalue}></lightning-input><!--placeholder={fw.Search_Fields__c}-->
+        </template>
+        </div>
+        <div>
+            <lightning-button variant="brand" label="Search"
+                        title="Search" onclick={SearchData}>
+            </lightning-button>
+            <lightning-button variant="brand" label="Reset"
+                        title="Reset" onclick={ResetSearch}>
+            </lightning-button>
+        </div>
+    
+        <lightning-layout multiple-rows="true" vertical-align="end">
+            <lightning-layout-item size="12" padding="around-small">
+                <div if:true={ResponseWrappper}>
+                    <div class="slds-text-heading_small">{ResponseWrappper.Title}</div>
+                    <lightning-datatable data={finalSObjectDataList} 
+                                        columns={ResponseWrappper.lstDataTableColumns} 
+                                        key-field="Id"
+                                        hide-checkbox-column="true"
+                                        ></lightning-datatable>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

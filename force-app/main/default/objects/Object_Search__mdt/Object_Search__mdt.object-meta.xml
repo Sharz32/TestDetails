@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This CM will be used to have all the search fields defined for an object. used in the LWC - objectSearch</description>
+    <label>Object Search</label>
+    <pluralLabel>Object Search</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>
